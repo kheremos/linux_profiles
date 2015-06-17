@@ -11,9 +11,9 @@ esac
 # Run keychain if available
 loadKeychain() {
     if hash keychain 2>/dev/null; then
-        keychain
+        eval `keychain --eval --agents ssh id_rsa`
     else
-        echo "keychain not available (ssh-agent not run)"
+        echo "keychain not available"
     fi
 }
 loadKeychain
