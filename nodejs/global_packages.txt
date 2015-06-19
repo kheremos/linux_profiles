@@ -14,9 +14,10 @@ node --version && npm --version
 # Install modules required for yeoman
 # http://yeoman.io/codelab/setup.html
 npm install --global yo bower grunt-cli
-# Version check (ex: 1.4.7, 1.4.1, grunt-cli v0.1.13)
 
+# Version check (ex: 1.4.7, 1.4.1, grunt-cli v0.1.13)
 yo --version && bower --version && grunt --version
 
 # Generators installed by Yeoman are global
+# Generators: webapp, gulp-webapp, angular
 ##############################################
