@@ -10,6 +10,9 @@
 # Verify node and npm installation (Ex: v0.12.4, 2.10.1)
 node --version && npm --version
 
+# Phantomjs requires libfontconfig
+sudo apt-get install libfontconfig
+
 ################ YEOMAN ######################
 # Install modules required for yeoman
 # http://yeoman.io/codelab/setup.html
