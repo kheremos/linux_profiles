@@ -1,0 +1,22 @@
+# This file assists me in remembering a variety of packages I
+# install globally.  For example, on a fresh install I may pull
+# a nodejs app from a repo, and the global expectations for
+# the repositories I use should be met by these.
+# 
+# Also, some of these tools don't fit the context of being
+# part of a specific node application. 
+# Example: yeoman, a scaffolding tool
+
+# Verify node and npm installation (Ex: v0.12.4, 2.10.1)
+node --version && npm --version
+
+################ YEOMAN ######################
+# Install modules required for yeoman
+# http://yeoman.io/codelab/setup.html
+npm install --global yo bower grunt-cli
+# Version check (ex: 1.4.7, 1.4.1, grunt-cli v0.1.13)
+
+yo --version && bower --version && grunt --version
+
+# Generators installed by Yeoman are global
+##############################################
