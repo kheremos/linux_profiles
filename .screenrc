@@ -1,0 +1,20 @@
+# Declares the shell as a login shell, making sure
+# id loads .bash_profile for each new screen instance
+shell -$SHELL
+vbell_msg "bell: window ~%" # Message for visual bell
+# vbellwait 1 # Seconds to pause the screen for visual bell
+vbell off # Turns visual bell off
+
+# COMMON SCREEN KEYBINDINGS
+# ^a ?		(List keybindings)
+# ^a c  	(Create new window)
+# ^a ^a	   	(Flip flop between windows)
+
+# SCREEN SPLITTING
+# ^a S		(Split horizontally)
+# ^a [tab]	(Jump to next display region)
+# ^a X		(Remove current display region)
+# ^a Q		(Remove all regions except current)
+# ^a |		(Split vertically)
+
+
