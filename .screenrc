@@ -7,7 +7,7 @@ vbell off # Turns visual bell off
 
 startup_message off # Disable copyright
 
-hardstatus alwayslastline "%{= kR} %-Lw%{=b Kk} %n%f %t %{-}%+Lw %=%{= dd}"
+hardstatus alwayslastline "%{= kR} %-Lw%{=b KY} %n%f %t %{-}%+Lw %=%{= dd}"
 
 ##########################
 # NOTES
