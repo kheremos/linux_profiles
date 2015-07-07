@@ -1,9 +1,13 @@
-# Declares the shell as a login shell, making sure
-# id loads .bash_profile for each new screen instance
-shell -$SHELL
+
+shell -$SHELL # Make sure screen loads .bash_profile
 vbell_msg "bell: window ~%" # Message for visual bell
+
 # vbellwait 1 # Seconds to pause the screen for visual bell
 vbell off # Turns visual bell off
+
+startup_message off # Disable copyright
+
+hardstatus alwayslastline "%{= kR} %-Lw%{=b Kk} %n%f %t %{-}%+Lw %=%{= dd}"
 
 ##########################
 # NOTES
