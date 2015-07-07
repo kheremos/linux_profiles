@@ -7,3 +7,4 @@ mv ~/.bash_aliases backup/
 cp .bash_profile ~
 cp .bashrc ~
 cp .bash_aliases ~
+cp .screenrc ~
