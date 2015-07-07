@@ -5,6 +5,14 @@ vbell_msg "bell: window ~%" # Message for visual bell
 # vbellwait 1 # Seconds to pause the screen for visual bell
 vbell off # Turns visual bell off
 
+##########################
+# NOTES
+
+# COMMON SCREEN COMMANDS
+# screen -r     # Re-attach screen
+# screen -ls    # See what screens are available
+# screen -r <name>  # Attach to screen with <name> or create a new one
+
 # COMMON SCREEN KEYBINDINGS
 # ^a ?		(List keybindings)
 # ^a c  	(Create new window)
@@ -17,4 +25,6 @@ vbell off # Turns visual bell off
 # ^a Q		(Remove all regions except current)
 # ^a |		(Split vertically)
 
-
+# See Also:
+# http://aperiodic.net/screen/quick_reference
+##########################
