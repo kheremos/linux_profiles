@@ -9,6 +9,9 @@ startup_message off # Disable copyright
 
 hardstatus alwayslastline "%{= kR} %-Lw%{=b KY} %n%f %t %{-}%+Lw %=%{= dd}"
 
+# disable C-a s, which freezes the screen; can be resolved with C-a q
+bind s
+
 ##########################
 # NOTES
 
