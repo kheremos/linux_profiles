@@ -12,26 +12,9 @@ hardstatus alwayslastline "%{= kR} %-Lw%{=b KY} %n%f %t %{-}%+Lw %=%{= dd}"
 # disable C-a s, which freezes the screen; can be resolved with C-a q
 bind s
 
-##########################
-# NOTES
-
-# COMMON SCREEN COMMANDS
-# screen -r     # Re-attach screen
-# screen -ls    # See what screens are available
-# screen -r <name>  # Attach to screen with <name> or create a new one
-
-# COMMON SCREEN KEYBINDINGS
-# ^a ?		(List keybindings)
-# ^a c  	(Create new window)
-# ^a ^a	   	(Flip flop between windows)
-
-# SCREEN SPLITTING
-# ^a S		(Split horizontally)
-# ^a [tab]	(Jump to next display region)
-# ^a X		(Remove current display region)
-# ^a Q		(Remove all regions except current)
-# ^a |		(Split vertically)
-
+####################################################
+# Screen notes can be found in this very repo, under:
+# https://github.com/kheremos/linux_profiles/blob/master/notes/screen_notes.md
 # See Also:
 # http://aperiodic.net/screen/quick_reference
-##########################
+####################################################
