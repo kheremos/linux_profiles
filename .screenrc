@@ -5,6 +5,9 @@ vbell_msg "bell: window ~%" # Message for visual bell
 # vbellwait 1 # Seconds to pause the screen for visual bell
 vbell off # Turns visual bell off
 
+# enable mouse-wheel backscrolling
+termcapinfo xterm* ti@:te@
+
 startup_message off # Disable copyright
 
 hardstatus alwayslastline "%{= kR} %-Lw%{=b KY} %n%f %t %{-}%+Lw %=%{= dd}"
