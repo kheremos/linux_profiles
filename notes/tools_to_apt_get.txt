@@ -1,6 +1,0 @@
-# http://mama.indstate.edu/users/ice/tree/
-tree
-# http://www.funtoo.org/Keychain
-keychain
-# https://github.com/ggreer/the_silver_searcher
-apt-get install silversearcher-ag
