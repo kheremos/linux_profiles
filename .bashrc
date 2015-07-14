@@ -1,6 +1,7 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # .bash_profile sources this file
-# Utility methods are currently stored here, but may be included elsewhere in the future
+# Utility methods are currently stored here, but may be
+#  included elsewhere in the future
 
 # Add command to ascertain external ip
 whatsmyip() {
