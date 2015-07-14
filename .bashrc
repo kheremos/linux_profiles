@@ -2,6 +2,17 @@
 # .bash_profile sources this file
 # Utility methods are currently stored here, but may be included elsewhere in the future
 
+# Add command to ascertain external ip
+whatsmyip() {
+  if hash curl 2>/dev/null; then
+    echo "Sending curl request to checkip.dyndns.org. (This may take up to 20 seconds)"
+    curl -s checkip.dyndns.org | sed -e 's/.*Current IP //'| sed -e 's/<.*$//'
+  else
+    echo "command 'curl' required."
+  fi
+}
+
+
 # Disable ctrl-s locking
 stty -ixon
 
@@ -89,8 +100,8 @@ esac
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
 
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
