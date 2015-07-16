@@ -1,7 +1,7 @@
 # Directory navigation aliases
 alias ..='cd ../'
 alias ...='cd ../..'
-alias ....='cd ../../..
+alias ....='cd ../../..'
 
 # Grep coloring (Not as important with ag)
 alias grep='grep --color=auto'
