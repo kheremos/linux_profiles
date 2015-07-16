@@ -1,7 +1,10 @@
 source ~/.bashrc
 
-alias ...='cd ../..'
-alias ..='cd ../'
+# Include custom .profile if it exists.
+if [ -f "$HOME/.profile" ]; then
+   source "$HOME/.profile"
+fi
+
 #       CONFIGURATE FUNCTION
 #       Customization script involving much COLOR (Command line & ls)
 #####################################################################
