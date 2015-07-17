@@ -1,46 +1,33 @@
-Common and Useful Screen Commands
+Screen Commands
 ==================================
-Re-attach screen   
-`screen -r`  
-
-See what screens are available  
-`screen -ls`    
-
-Attach to screen with _name_ or create a new session  
-`screen -r <name>`
+| Command                  |                                                      |
+|--------------------------|------------------------------------------------------|
+| `screen -r`              | Re-attach screen                                     |
+| `screen -ls`             | List available screens                               |
+| `screen -r *name*`       | Attach to screen with *name* or create a new session |
 
 Common keybindings
 ------------------
-Keybindings help   
-`^a ?`   
+| Common keybindings     | Help and Navigation        |
+|------------------------|----------------------------|
+| `^a ?`                 | Keybindings help           |
+| `^a ^a`                | Toggle between two windows |
+| `^a ^n`                | Switch to next window      |
+| `^a ^p`                | Switch to previous window  |
 
-Create new window   
-`^a c`   
-
-Toggle between two windows   
-`^a ^a`
-	
-Switch to next window   
-`^a ^n`
-
-Screen Splitting/Management
----------------------------
-Split horizontally  
-^a S	
-Jump to next display region  	
-^a [tab]	  
-Remove current display region  
-^a X		
-Remove all regions except current  
-^a Q		
-Split vertically  
-^a |		
+| Screen Splitting/Management |                               |
+|-----------------------------|-------------------------------|
+| `^a c`                      | Create new window             |
+| `^a A`                      | Rename current window         |
+| `^a ^S`                     | Split horizontally            |
+| `^a ^|`                     | Split vertically              |
+| `^a ^*tab*`                 | Jump to next display region   |
+| `^a X`                      | Remove current display region |
+| `^a Q`                      | Remove all other regions      |
 
 Share Screens
 -------------
-
-Create the screen session  
+Create the shared screen session  
 ```screen -d -m -S shared```
-
 Join the screen session  
 ```screen -x shared```
