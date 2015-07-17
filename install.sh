@@ -16,3 +16,10 @@ moveIt .bash_profile
 moveIt .bash_aliases
 moveIt .bashrc
 moveIt .screenrc
+
+# Add reference to this directory for GBRAIN access
+LINE="export `pwd`"
+FILE="$HOME/.bash_profile"
+grep -q "$LINE" "$FILE" || echo "$LINE" >> "$FILE"
+
+

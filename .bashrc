@@ -24,14 +24,11 @@ case $- in
 esac
 
 # Run keychain if available
-loadKeychain() {
-    if hash keychain 2>/dev/null; then
-        eval `keychain --eval --agents ssh id_rsa`
-    else
-        echo "keychain not available"
-    fi
-}
-loadKeychain
+ if hash keychain 2>/dev/null; then
+     eval `keychain --eval --agents ssh id_rsa`
+ else
+     echo "ssh keychain not available"
+ fi
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -60,15 +57,10 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-# set a fancy prompt (non-color, unless we know we "want" color)
+# set a fancy prompt 
 case "$TERM" in
     xterm-color) color_prompt=yes;;
 esac
-
-# uncomment for a colored prompt, if the terminal has the capability; turned
-# off by default to not distract the user: the focus in a terminal window
-# should be on the output of commands, not on the prompt
-#force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
@@ -97,26 +89,9 @@ xterm*|rxvt*)
     ;;
 esac
 
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    alias dir='dir --color=auto'
-    alias vdir='vdir --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
-
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
-# Alias definitions import
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -128,3 +103,19 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+############## GBRAIN HELP SYSTEM ##############
+# Autocomplete method for the gbrain help system
+_gbrain()
+{
+    local cur=${COMP_WORDS[COMP_CWORD]}
+    COMPREPLY=( $(compgen -W "foo git screen" -- $cur) )
+}
+complete -F _gbrain gbrain
+
+# complete -F _gbrain gbrain
+gbrain(){
+        echo "cat ${GBRAIN_DIR}/notes/$1_notes.md"
+}
+
+
