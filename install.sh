@@ -18,8 +18,7 @@ moveIt .bashrc
 moveIt .screenrc
 
 # Add reference to this directory for GBRAIN access
-LINE="export `pwd`"
+LINE="export GBRAIN_DIR=`pwd`"
 FILE="$HOME/.bash_profile"
 grep -q "$LINE" "$FILE" || echo "$LINE" >> "$FILE"
-
 

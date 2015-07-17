@@ -115,7 +115,7 @@ complete -F _gbrain gbrain
 
 # complete -F _gbrain gbrain
 gbrain(){
-        echo "cat ${GBRAIN_DIR}/notes/$1_notes.md"
+	cat "${GBRAIN_DIR}/notes/$1_notes.md"
 }
 
 
