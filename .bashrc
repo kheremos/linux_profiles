@@ -109,7 +109,7 @@ fi
 _gbrain()
 {
     local cur=${COMP_WORDS[COMP_CWORD]}
-    COMPREPLY=( $(compgen -W "foo git screen" -- $cur) )
+    COMPREPLY=( $(compgen -W "vim git screen" -- $cur) )
 }
 complete -F _gbrain gbrain
 
