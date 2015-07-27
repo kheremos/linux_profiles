@@ -106,16 +106,16 @@ fi
 
 ############## GBRAIN HELP SYSTEM ##############
 # Autocomplete method for the gbrain help system
-_gbrain()
+_ghelp()
 {
     local cur=${COMP_WORDS[COMP_CWORD]}
     COMPREPLY=( $(compgen -W "vim git screen" -- $cur) )
 }
-complete -F _gbrain gbrain
+complete -F _ghelp ghelp
 
 # complete -F _gbrain gbrain
-gbrain(){
-	cat ${GBRAIN_DIR}/notes/$1_notes.md
+ghelp(){
+	cat ${GHELP_DIR}/notes/$1_notes.md
 }
 
 

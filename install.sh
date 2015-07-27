@@ -17,8 +17,9 @@ moveIt .bash_aliases
 moveIt .bashrc
 moveIt .screenrc
 
-# Add reference to this directory for GBRAIN access
-LINE="export GBRAIN_DIR=`pwd`"
+# Add reference to this directory for GHELP access
+# ghelp provides a shortcut for common command usage
+LINE="export GHELP_DIR=`pwd`"
 FILE="$HOME/.bash_profile"
 grep -q "$LINE" "$FILE" || echo "$LINE" >> "$FILE"
 
