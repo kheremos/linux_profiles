@@ -21,3 +21,6 @@ GIT Notes
 | git tag -l                               | List tags                       |
 | git checkout tags/*tag_name*             | Checkout tag                    |
 | git checkout *tag_name* -b *branch_name* | Checkout tag as *branch_name*   |
+
+Delete all local branches that have been merged, excluding master, develop, and current.
+git branch --merged master | grep -v "master" | grep -v "develop" | grep -v "*" | xargs -n 1 git branch -d
