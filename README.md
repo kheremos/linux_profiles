@@ -6,10 +6,12 @@ This repo basically acts a remote 'brain'.
 Can be quickly set up on a system as follows...   
 ```bash
 git clone https://github.com/kheremos/linux_profiles.git
-./install.sh
+. ./update.sh
 ```
-(Review install.sh, you should never run arbitrary scripts without reviewing them)
+(Review update.sh, you should never run arbitrary scripts without reviewing them)   
 
+Update profiles and configuration:   
+```. update.sh```
 
 ##### NOTE:
 I'm not fully respecting the intentions of the various configuration files.   
