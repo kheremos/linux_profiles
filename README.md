@@ -11,7 +11,7 @@ git clone https://github.com/kheremos/linux_profiles.git
 (Review install.sh, you should never run arbitrary scripts without reviewing them)
 
 
-NOTE:
+##### NOTE:
 I'm not fully respecting the intentions of the various configuration files.   
 I should review the specific differences between them and tie into them,   
 rather than blindly overriding all of them... (Probably by adding source   
