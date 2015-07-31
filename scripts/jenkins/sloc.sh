@@ -11,11 +11,9 @@ if [ -z "$1" ]; then
 elif [ "$1" = "-e" ]; then
   command="$slocBin . -e \"$ignoreNonCode|$ignoreBuild|$2\" $keys"
   eval "$command"
-#  eval $slocBin . -e "$ignoreNonCode|$ignoreBuild|$2" --keys total,source,comment
 elif [ "$1" = "-v" ]; then
    command="$slocBin . -e \"$ignoreNonCode|$ignoreBuild\" --details --format cli-table $keys"
    eval "$command"
-#   eval $slocBin . -e "$ignore" --details --format cli-table --keys total,source,comment
 else #wc: invalid option -- 'a'
         echo "invalid argument '$1'"
         echo "The following options are accepted:"
@@ -26,4 +24,3 @@ else #wc: invalid option -- 'a'
         echo "                  EX: '.*\.coffee|build' to exclude both"
         echo "Only one option may be used at a time."
 fi
-
