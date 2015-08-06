@@ -11,7 +11,7 @@ GIT Notes
 | git reset                           | This will unstage all files you might have staged with git add     |
 | git reset --hard HEAD               | Revert ALL uncommitted changes                                     |
 | git clean -fdx                      | Remove all local untracked files, only git tracked files remain    |
-| git log --pretty=oneline --decorate | Colorized git log                                                  |
+| git log --graph --oneline --all     | Colorized git log ( or ```git log --pretty=oneline --decorate``` ) |
 
 | **Branching**                            ||
 |------------------------------------------|---------------------------------|
