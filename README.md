@@ -19,3 +19,5 @@ I should review the specific differences between them and tie into them,
 rather than blindly overriding all of them... (Probably by adding source   
 lines to the end of each that reference the versions in the repo.)   
 [Dot files explained](http://mywiki.wooledge.org/DotFiles)
+
+This is no [Awesome-shell](https://github.com/alebcay/awesome-shell)
