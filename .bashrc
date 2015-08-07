@@ -104,16 +104,26 @@ if ! shopt -oq posix; then
   fi
 fi
 
+############## set_screen_title ##############
+# Function to set the title for a screen and
+# the putty windows.
+set_screen_title ()
+{
+    echo -ne "\ek$1\e\\"
+    echo -e '\033]2;'$1'\007'
+}
+
+
 ############## GBRAIN HELP SYSTEM ##############
-# Autocomplete method for the gbrain help system
+# Autocomplete method for the 'ghelp' function
 _ghelp()
 {
     local cur=${COMP_WORDS[COMP_CWORD]}
+    # these map to files in this repo
     COMPREPLY=( $(compgen -W "vim git screen" -- $cur) )
 }
 complete -F _ghelp ghelp
 
-# complete -F _gbrain gbrain
 ghelp(){
 	cat ${GHELP_DIR}/notes/$1_notes.md
 }
