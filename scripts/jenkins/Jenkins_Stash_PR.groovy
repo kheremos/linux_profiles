@@ -1,3 +1,7 @@
+// ********** CONFIG ************* //
+def stash_repo = "stash.yourWebsite.com:9990"
+def jenkins = jenkins.yourWebsite.com
+
 // ********** LOGGING ************** //
 def DEBUG = true;
 def logger = { logThis, msg -> logThis ? manager.listener.logger.println(msg) : null } 
@@ -11,10 +15,10 @@ def USER          = manager.getEnvVariable('JENKINS_SECRET')
 def REPO_KEY      = manager.getEnvVariable('PULL_REQUEST_FROM_REPO_PROJECT_KEY')
 def REPO_SLUG     = manager.getEnvVariable('PULL_REQUEST_FROM_REPO_SLUG')
 def PR_ID         = manager.getEnvVariable('PULL_REQUEST_ID')
-def buildLink = "http://jenkins.gtsservices.com/job/${JOB_NAME}/${BUILD_NUMBER}/"
+def buildLink = "http://${jenkins}/job/${JOB_NAME}/${BUILD_NUMBER}/"
 
 // ********** COMMENT ************** //
-def commentURI =  "https://stash.gtsservices.com:8443/rest/api/1.0/projects/${REPO_KEY}/repos/${REPO_SLUG}/pull-requests/${PR_ID}/comments"
+def commentURI =  "https://${stash_repo}/rest/api/1.0/projects/${REPO_KEY}/repos/${REPO_SLUG}/pull-requests/${PR_ID}/comments"
 def buildResult = manager.getResult()
 def comment = "[BUILD ${JOB_NAME}-${BUILD_NUMBER} ${buildResult}](${buildLink})"
 
