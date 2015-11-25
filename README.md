@@ -15,9 +15,11 @@ Update profiles and configuration:
 
 ##### NOTE:
 I'm not fully respecting the intentions of the various configuration files.   
-I should review the specific differences between them and tie into them,   
-rather than blindly overriding all of them... (Probably by adding source   
+The specific differences between them should be reviewed and tied into,   
+rather than blindly overriding some of them... (Probably by adding source   
 lines to the end of each that reference the versions in the repo.)   
 [Dot files explained](http://mywiki.wooledge.org/DotFiles)
 
 This is no [Awesome-shell](https://github.com/alebcay/awesome-shell)
+
+Practices to evolve towards [Portable-Shell](http://www.gnu.org/savannah-checkouts/gnu/autoconf/manual/autoconf-2.69/html_node/Portable-Shell.html)
