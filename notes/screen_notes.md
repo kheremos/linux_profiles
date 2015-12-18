@@ -1,10 +1,12 @@
 Screen Commands
 ==================================
-| Command                  |                                                      |
-|--------------------------|------------------------------------------------------|
-| `screen -r`              | Re-attach screen                                     |
-| `screen -ls`             | List available screens                               |
-| `screen -r *name*`       | Attach to screen with *name* or create a new session |
+| Command            |                                                      |
+|--------------------|------------------------------------------------------|
+| `screen -r`        | Re-attach screen                                     |
+| `screen -ls`       | List available screens                               |
+| `screen -r *name*` | Attach to screen with *name* or create a new session |
+| `screen -d`        | Detach screen session                                |
+| `exit`             | Close current screen session (tab)                   | 
 
 Common keybindings
 ------------------
