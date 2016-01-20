@@ -1,5 +1,4 @@
 #!/usr/bin/python
-# Not this one #!/usr/bin/env python
 
 import boto3
 
