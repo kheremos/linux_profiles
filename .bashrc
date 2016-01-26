@@ -15,7 +15,7 @@ whatsmyip() {
 
 
 # Disable ctrl-s locking
-stty -ixon
+[[ $- == *i* ]] && stty -ixon
 
 # If not running interactively, don't do anything
 case $- in
