@@ -5,11 +5,11 @@
 
 # Add command to ascertain external ip
 whatsmyip() {
-  if hash curl 2>/dev/null; then
-    echo "Sending curl request to checkip.dyndns.org. (This may take up to 20 seconds)"
-    curl -s checkip.dyndns.org | sed -e 's/.*Current IP //'| sed -e 's/<.*$//'
+  if hash dig 2>/dev/null; then
+    echo "Sending dig request to @resolver1.opendns.com."
+    dig +short myip.opendns.com @resolver1.opendns.com
   else
-    echo "command 'curl' required."
+    echo "command 'dig' required."
   fi
 }
 
