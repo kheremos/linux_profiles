@@ -1,3 +1,5 @@
+# NOTE: I am not sure I like using brew to manage node/npm
+# Take this route if you're a fan of homebrew
 sudo apt-get install ruby 
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
 sudo apt-get install build-essential
