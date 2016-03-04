@@ -1,4 +1,6 @@
-source ~/.bashrc
+if [ -f ~/.bashrc ]; then
+   source ~/.bashrc
+fi
 
 # Alias definitions import
 if [ -f ~/.bash_aliases ]; then
