@@ -11,3 +11,4 @@ apt-get install tree
 apt-get install keychain
 # https://github.com/ggreer/the_silver_searcher
 apt-get install silversearcher-ag
+# brew install ag
