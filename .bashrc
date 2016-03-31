@@ -127,6 +127,15 @@ ghelp(){
 	cat ${GHELP_DIR}/notes/$1_notes.md
 }
 
+#       AWS Host Config
+####################################################
+gsHOST='\h'
+if hash jq 2>/dev/null; then
+  gsHOST=`jq -r '.Name' /opt/gs/etc/instance-tags.json`
+fi
+if [ "null" == "$HOST" ]; then
+  gsHOST='\h'
+fi
 
 #       CONFIGURATE FUNCTION
 #       Customization script involving much COLOR (Command line & ls)
