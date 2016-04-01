@@ -159,7 +159,7 @@ local YELLOW="\[\033[0;33m\]"   YL="0;33"
 local BYLLOW="\[\033[1;33m\]"   BYL="1;33"
 local NORMC="\[\033[40m\]${GRAY}"
 export PS1="
-${GREEN}\u${GRAY}@${CYAN}\h${BBLUE}:\w
+${GREEN}\u${GRAY}@${CYAN}${gsHOST}${BBLUE}:\w
 ${NORMC}\$ "
 ### set -vfx    ### Debug listing
 local STRUCT_1="no=00:fi=00:pi=40;33:so=01;35:di=$BBL:ln=$BCY:ex=$BGR"
